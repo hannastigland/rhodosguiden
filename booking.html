@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Rhodosguiden</title>
+</head>
+<body>
+    <header class="header">
+    <h1>Rhodosguiden - din guide till stränder, kultur och äventyr</h1>
+</header>
+
+<nav class="menu">
+    <a href="index.html">Hem</a>
+    <a href="beaches.html">Stränder</a>
+    <a href="restaurants.html">Restauranger</a>
+    <a href="todo.html">Att göra</a>
+    <a href="booking.html">Boka aktiviteter</a>
+</nav>
+
+<main class="form-page">
+
+    <h2>Boka aktiviteter med oss</h2>
+    <p>Här kan du skicka din bokningsförfrågan!</p>
+    <p>Läs mer om våra aktiviteter <a href="todo.html">här.</a></p>
+
+    <form action="submit-booking.php" method="post">
+        <label for="name">Namn:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+    
+        <label for="email">E-post:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="tour">Välj tur:</label><br>
+        <select id="tour" name="tour" required>
+            <option value="shuttle_bus">Dagstur till Lindos med Shuttle Bus</option>
+            <option value="boat_tour">Båttur runt Rhodos</option>
+        </select><br><br>
+    
+        <label for="message">Meddelande (önskat datum, antal personer, etc.):</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    
+        <input type="submit" value="Skicka Bokningsförfrågan">
+    </form>
+    
+
+</main>
+
+<footer class ="footer">
+    <p>&copy; 2024 Rhodosguiden</p>
+</footer>
+</body>
+</html>

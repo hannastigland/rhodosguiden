@@ -61,7 +61,13 @@
 }
 
 #villages-list a:hover {
-    background-color: #1F82BF;
-    border-radius: 4px;
+    background-color: #191F44;
+    border-radius: 5px;
+}
+
+#villages-list a {
+    color: #1F82BF;
+    text-decoration: none;
+    padding: 3px;
 }
 
