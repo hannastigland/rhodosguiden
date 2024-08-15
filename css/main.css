@@ -1,0 +1,67 @@
+.header {
+    grid-row: 1;
+    background-color: #183F8C;
+    padding: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.menu {
+    grid-row: 2;
+    background-color: #1F82BF;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #191F44;
+    border-radius: 4px;
+}
+
+#weather {
+    background-color: #F2F1F0; /* Ljus bakgrundsfärg för sektionen */
+    padding: 20px;            /* Utrymme runt innehållet */
+    border-radius: 10px;       /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga för djup */
+    margin-top: 20px;         /* Avstånd från andra element ovanför */
+    max-width: 140px;         /* Maximal bredd */
+    margin-left: auto;        /* Centrera horisontellt */
+    margin-right: auto;       /* Centrera horisontellt */
+    text-align: center;       /* Centrera texten */
+}
+
+#villages-list {
+    background-color: #F2F1F0; /* Ljus bakgrundsfärg för sektionen */
+    padding: 20px;            /* Utrymme runt innehållet */
+    border-radius: 10px;       /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga för djup */
+    margin-top: 20px;         /* Avstånd från andra element ovanför */
+    max-width: 140px;         /* Maximal bredd */
+    margin-left: auto;        /* Centrera horisontellt */
+    margin-right: auto;       /* Centrera horisontellt */
+    text-align: center;       /* Centrera texten */
+}
+
+#villages-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#villages-list a:hover {
+    background-color: #1F82BF;
+    border-radius: 4px;
+}
+
