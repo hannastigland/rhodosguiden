@@ -30,6 +30,12 @@
     border-radius: 4px;
 }
 
+body {
+    background-color: #F2F1F0; /* Bakgrundsfärg för hela sidan */
+    font-family: Arial, sans-serif; /* Valfri font för hela sidan */
+    min-height: 100vh; /* Gör så att sidan alltid fyller hela höjden på fönstret */
+}
+
 #weather {
     background-color: #F2F1F0; /* Ljus bakgrundsfärg för sektionen */
     padding: 20px;            /* Utrymme runt innehållet */
@@ -69,5 +75,96 @@
     color: #1F82BF;
     text-decoration: none;
     padding: 3px;
+}
+
+.form-page {
+    background-color: #183F8C;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto; /* Centrera formuläret */
+    box-sizing: border-box;
+}
+
+.form-page a {
+        color: #FFFFFF; /* Ändrar textfärgen på länkar till vit */
+        text-decoration: none; /* Tar bort understrykning från länkar, om så önskas */
+}
+
+.form-page a:hover {
+        text-decoration: underline; /* Understrykning när man hovrar över länken */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%; /* Gör input-elementen lika breda som formuläret */
+    padding: 10px;
+    margin-bottom: 10px; /* Avstånd mellan input-fälten */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #1F82BF;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #191F44; /* En mörkare färg på submit-knappen när man hovrar */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px; /* Maximal bredd för hela container */
+    margin: 0 auto;   /* Centrera container */
+}
+
+.image {
+    width: 100%; /* Gör bilden lika bred som container */
+    max-width: 500px; /* Begränsa bredden till max 700px */
+    height: auto; /* Bevara bildens proportioner */
+    border-bottom: 4px solid #FFFFFF;
+}
+
+.text-box {
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Matcha text-boxens bredd med bildens bredd */
+    box-sizing: border-box; /* Säkerställ att padding inte lägger till extra bredd */
+}
+
+
+.info-text {
+    margin-bottom: 10px;
+    color: #333; /* Textfärg för informationstexten */
+    line-height: 1.5;
 }
 
