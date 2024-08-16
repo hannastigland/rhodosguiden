@@ -1,13 +1,13 @@
+/* Grundläggande stil för header */
 .header {
-    grid-row: 1;
     background-color: #183F8C;
     padding: 20px;
     text-align: center;
     color: #FFFFFF;
 }
 
+/* Grundläggande stil för meny */
 .menu {
-    grid-row: 2;
     background-color: #1F82BF;
     padding: 10px;
     text-align: center;
@@ -15,10 +15,9 @@
     justify-content: space-around;
     align-items: center;
     margin: 0;
-    height: auto;
-    box-sizing: border-box;
 }
 
+/* Stilar för meny-länkar */
 .menu a {
     color: #FFFFFF;
     text-decoration: none;
@@ -30,45 +29,89 @@
     border-radius: 4px;
 }
 
+/* Grundläggande stil för hela sidan */
 body {
-    background-color: #F2F1F0; /* Bakgrundsfärg för hela sidan */
-    font-family: Arial, sans-serif; /* Valfri font för hela sidan */
-    min-height: 100vh; /* Gör så att sidan alltid fyller hela höjden på fönstret */
+    background-color: #F2F1F0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#weather {
-    background-color: #F2F1F0; /* Ljus bakgrundsfärg för sektionen */
-    padding: 20px;            /* Utrymme runt innehållet */
-    border-radius: 10px;       /* Rundade hörn */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga för djup */
-    margin-top: 20px;         /* Avstånd från andra element ovanför */
-    max-width: 140px;         /* Maximal bredd */
-    margin-left: auto;        /* Centrera horisontellt */
-    margin-right: auto;       /* Centrera horisontellt */
-    text-align: center;       /* Centrera texten */
+/* Layout för innehåll med sidebar */
+.content-with-sidebar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Gör så att layouten kan brytas till en ny rad vid små skärmar */
 }
 
-#villages-list {
-    background-color: #F2F1F0; /* Ljus bakgrundsfärg för sektionen */
-    padding: 20px;            /* Utrymme runt innehållet */
-    border-radius: 10px;       /* Rundade hörn */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skugga för djup */
-    margin-top: 20px;         /* Avstånd från andra element ovanför */
-    max-width: 140px;         /* Maximal bredd */
-    margin-left: auto;        /* Centrera horisontellt */
-    margin-right: auto;       /* Centrera horisontellt */
-    text-align: center;       /* Centrera texten */
+/* Stil för bildcontainern */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
+.image-container-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Stil för bilden */
+.image {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #FFFFFF;
+}
+
+/* Stil för text-boxen */
+.text-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.text-box-index {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stil för sidofältet */
+.sidebar {
+    flex: 1;
+    max-width: 15%; /* Justera max-bredden för att passa layouten */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Stil för vädersektionen */
+#weather, #villages-list {
+    background-color: #F2F1F0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Stil för bylistan */
 #villages-list ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-#villages-list a:hover {
-    background-color: #191F44;
-    border-radius: 5px;
 }
 
 #villages-list a {
@@ -77,6 +120,21 @@ body {
     padding: 3px;
 }
 
+#villages-list a:hover {
+    background-color: #191F44;
+    border-radius: 5px;
+}
+
+/* Stil för footer */
+.footer {
+    background-color: #1F82BF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+/* Formulärsidan */
 .form-page {
     background-color: #183F8C;
     color: #FFFFFF;
@@ -84,17 +142,16 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
-    margin: 0 auto; /* Centrera formuläret */
-    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .form-page a {
-        color: #FFFFFF; /* Ändrar textfärgen på länkar till vit */
-        text-decoration: none; /* Tar bort understrykning från länkar, om så önskas */
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .form-page a:hover {
-        text-decoration: underline; /* Understrykning när man hovrar över länken */
+    text-decoration: underline;
 }
 
 form {
@@ -103,13 +160,10 @@ form {
     justify-content: center;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%; /* Gör input-elementen lika breda som formuläret */
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px; /* Avstånd mellan input-fälten */
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -125,54 +179,20 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #191F44; /* En mörkare färg på submit-knappen när man hovrar */
+    background-color: #191F44;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
+/* Responsiva justeringar */
+@media (max-width: 768px) {
+    .content-with-sidebar {
+        flex-direction: column;
+    }
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 500px; /* Maximal bredd för hela container */
-    margin: 0 auto;   /* Centrera container */
-}
+    .image-container, .sidebar {
+        max-width: 100%;
+    }
 
-.image {
-    width: 100%; /* Gör bilden lika bred som container */
-    max-width: 500px; /* Begränsa bredden till max 700px */
-    height: auto; /* Bevara bildens proportioner */
-    border-bottom: 4px solid #FFFFFF;
-}
-
-.text-box {
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Matcha text-boxens bredd med bildens bredd */
-    box-sizing: border-box; /* Säkerställ att padding inte lägger till extra bredd */
-}
-
-
-.info-text {
-    margin-bottom: 10px;
-    color: #333; /* Textfärg för informationstexten */
-    line-height: 1.5;
-}
-
-.footer {
-    grid-row: 4;
-    background-color: #1F82BF;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 5px;
-    margin-top: 20px;
+    .image-container {
+        margin-bottom: 20px; /* Lägg till avstånd mellan bild och sidofält på mindre skärmar */
+    }
 }
