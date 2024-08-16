@@ -168,3 +168,11 @@ input[type="submit"]:hover {
     line-height: 1.5;
 }
 
+.footer {
+    grid-row: 4;
+    background-color: #1F82BF;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}
