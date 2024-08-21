@@ -5,16 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault(); // Förhindra att formuläret skickas
 
         // Hämta värden från formuläret
-        const name = document.querySelector('#name').value.trim();
-        const email = document.querySelector('#email').value.trim();
-        const tour = document.querySelector('#tour').value;
-        const message = document.querySelector('#message').value.trim();
+        const name = escapeHTML(document.querySelector('#name').value.trim());
+        const email = escapeHTML(document.querySelector('#email').value.trim());
+        const tour = escapeHTML(document.querySelector('#tour').value);
+        const message = escapeHTML(document.querySelector('#message').value.trim());
         
         let errors = [];
 
         // Validering av namn
         if (name === '') {
             errors.push('Namn kan inte vara tomt.');
+        } else if (!/^[a-zA-Z\s]+$/.test(name)) {
+            errors.push('Namn får endast innehålla bokstäver och mellanslag.');
         }
 
         // Validering av e-post
@@ -27,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validering av meddelande
         if (message === '') {
             errors.push('Meddelande kan inte vara tomt.');
+        } else if (/[\<\>\"\'\`]/.test(message)) {
+            errors.push('Meddelandet innehåller otillåtna tecken.');
         }
 
         // Om det finns några fel, visa dem
@@ -46,5 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
+    }
+
+    // Funktion för att "escape" farliga tecken i användarinput
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;')
+                  .replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;')
+                  .replace(/"/g, '&quot;')
+                  .replace(/'/g, '&#39;');
     }
 });
