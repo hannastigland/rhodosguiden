@@ -196,6 +196,11 @@ input[type="submit"]:hover {
         max-width: 100%;
     }
 
+    .image-container-index {
+        max-width: 100%; /* Ta bort begränsningen för max-bredden på mindre skärmar */
+        margin: 0; /* Ta bort stora marginaler */
+    }
+
     .image-container {
         margin-bottom: 20px; /* Lägg till avstånd mellan bild och sidofält på mindre skärmar */
     }
