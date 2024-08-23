@@ -1,0 +1,20 @@
+{
+    "sightseeing": [
+        {
+            "title": "Medeltida gamla stan",
+            "description": "En av Europas bäst bevarade medeltida städer med charmiga gränder och historiska byggnader."
+        },
+        {
+            "title": "Akropolis i Lindos",
+            "description": "En antik plats med ruiner som erbjuder en fantastisk utsikt över Lindos och havet."
+        },
+        {
+            "title": "Kolossen på Rhodos",
+            "description": "En av världens sju underverk i antiken, en imponerande staty som en gång stod vid hamninloppet."
+        },
+        {
+            "title": "Tsambika Kloster",
+            "description": "Ett vackert kloster på en kulle med utsikt över en av Rhodos finaste stränder. Enligt legenden ska barnlösa kvinnor som önskar bli gravida gå barfota till klostret och be till jungfru Maria. Om önskan uppfylles ska pojkar döpas till Tsambikos och flickor till Tsampika, namn som i stort sett bara används på Rhodos."
+        }
+    ]
+}

@@ -59,6 +59,22 @@ body {
     margin: 0 auto;
 }
 
+
+/* Anpassa listan så att den ser bra ut */
+#sightseeing-list ul {
+    list-style-type: none; /* Ta bort punktlistan */
+    padding: 20px; /* Ta bort standard padding */
+    margin: 0; /* Ta bort standard marginal */
+}
+
+#sightseeing-list li {
+    padding: 10px 0; /* Lägg till lite utrymme mellan listobjekten */
+}
+
+#sightseeing-list li:last-child {
+    border-bottom: none; /* Ta bort den nedre gränsen på det sista listobjektet */
+}
+
 .image-container-index {
     display: flex;
     flex: 1;
