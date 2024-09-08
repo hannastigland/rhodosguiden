@@ -42,7 +42,6 @@
         </div>
     </div>
 
-<!-- Sektion för att visa utflyktsmål -->
 <section id="sightseeing-list" class="image-container">
     <img src="https://www.griechenland.de/images/_1200x675_crop_center-center_90_none/Tsambika-Kloster_Rhodos_Griechenland.jpg" alt="Tsambika kloster" class="image">
     <h2>Sevärdheter på Rhodos</h2>
@@ -54,7 +53,6 @@
     <p>&copy; 2024 Rhodosguiden</p>
 </footer>
 
- <!-- JavaScript för att hämta och visa sevärdhetsdata -->
  <script>
     function fetchSightseeing() {
         fetch('json/sightseeing.json')
@@ -71,7 +69,7 @@
             .catch(error => console.error('Fel vid hämtning av data:', error));
     }
 
-    // Anropar funktionen för att hämta och visa sevärdheter
+    
     fetchSightseeing();
 </script>
 

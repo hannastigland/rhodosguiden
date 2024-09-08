@@ -1,4 +1,4 @@
-/* Grundläggande stil för header */
+/* Header */
 .header {
     background-color: #183F8C;
     padding: 20px;
@@ -6,7 +6,7 @@
     color: #FFFFFF;
 }
 
-/* Grundläggande stil för meny */
+/* Meny */
 .menu {
     background-color: #1F82BF;
     padding: 10px;
@@ -17,7 +17,6 @@
     margin: 0;
 }
 
-/* Stilar för meny-länkar */
 .menu a {
     color: #FFFFFF;
     text-decoration: none;
@@ -29,7 +28,7 @@
     border-radius: 4px;
 }
 
-/* Grundläggande stil för hela sidan */
+/* Body */
 body {
     background-color: #F2F1F0;
     font-family: Calibri, sans-serif;
@@ -37,16 +36,16 @@ body {
     padding: 0;
 }
 
-/* Layout för innehåll med sidebar */
+/* Indexsidan med sidebar */
 .content-with-sidebar {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
     padding: 20px;
-    flex-wrap: wrap; /* Gör så att layouten kan brytas till en ny rad vid små skärmar */
+    flex-wrap: wrap; 
 }
 
-/* Stil för bildcontainern */
+/* Bildcontainers */
 .image-container {
     display: flex;
     flex-direction: column;
@@ -59,22 +58,6 @@ body {
     margin: 0 auto;
 }
 
-
-/* Anpassa listan så att den ser bra ut */
-#sightseeing-list ul {
-    list-style-type: none; /* Ta bort punktlistan */
-    padding: 20px; /* Ta bort standard padding */
-    margin: 0; /* Ta bort standard marginal */
-}
-
-#sightseeing-list li {
-    padding: 10px 0; /* Lägg till lite utrymme mellan listobjekten */
-}
-
-#sightseeing-list li:last-child {
-    border-bottom: none; /* Ta bort den nedre gränsen på det sista listobjektet */
-}
-
 .image-container-index {
     display: flex;
     flex: 1;
@@ -84,20 +67,20 @@ body {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    max-width: 50%; /* Bildens strl */
+    max-width: 50%;
     margin-right: 200px;
     margin-left: 200px;
     margin-top: 40px;
 }
 
-/* Stil för bilden */
+/* Bild */
 .image {
     width: 100%;
     height: auto;
     border-bottom: 4px solid #FFFFFF;
 }
 
-/* Stil för text-boxen */
+/* Textbox */
 .text-box {
     padding: 20px;
     text-align: center;
@@ -108,17 +91,17 @@ body {
     text-align: center;
 }
 
-/* Stil för sidofältet */
+/* Sidebar */
 .sidebar {
     flex: 1;
-    max-width: 15%; /* Justera max-bredden för att passa layouten */
+    max-width: 15%; 
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
 }
 
-/* Stil för vädersektionen */
+/* Väder och lista */
 #weather, #villages-list {
     background-color: #F2F1F0;
     padding: 20px;
@@ -127,7 +110,6 @@ body {
     text-align: center;
 }
 
-/* Stil för bylistan */
 #villages-list ul {
     list-style: none;
     padding: 0;
@@ -145,7 +127,21 @@ body {
     border-radius: 5px;
 }
 
-/* Stil för footer */
+#sightseeing-list ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+#sightseeing-list li {
+    padding: 10px 0;
+}
+
+#sightseeing-list li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
 .footer {
     background-color: #1F82BF;
     color: #FFFFFF;
@@ -154,7 +150,7 @@ body {
     margin-top: 20px;
 }
 
-/* Formulärsidan */
+/* Bokningssida */
 .form-page {
     background-color: #183F8C;
     color: #FFFFFF;
@@ -202,7 +198,7 @@ input[type="submit"]:hover {
     background-color: #191F44;
 }
 
-/* Responsiva justeringar */
+/* Media queries */
 @media (max-width: 768px) {
     .content-with-sidebar {
         flex-direction: column;
@@ -213,11 +209,11 @@ input[type="submit"]:hover {
     }
 
     .image-container-index {
-        max-width: 100%; /* Ta bort begränsningen för max-bredden på mindre skärmar */
-        margin: 0; /* Ta bort stora marginaler */
+        max-width: 100%;
+        margin: 0;
     }
 
     .image-container {
-        margin-bottom: 20px; /* Lägg till avstånd mellan bild och sidofält på mindre skärmar */
-    }
+        margin-bottom: 20px;
+}
 }
