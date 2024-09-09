@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('#bookingForm');
+    const confirmationMessage = document.createElement('div');
+    confirmationMessage.style.display = 'none';
+
+    const introSection = document.querySelector('#introSection');
+
+    introSection.parentNode.insertBefore(confirmationMessage, introSection.nextSibling);
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -8,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = escapeHTML(document.querySelector('#email').value.trim());
         const tour = escapeHTML(document.querySelector('#tour').value);
         const message = escapeHTML(document.querySelector('#message').value.trim());
-        
+
         let errors = [];
 
         if (name === '') {
@@ -34,7 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        alert('Tack för din bokningsförfrågan, vi återkommer via mail inom 24 timmar.');
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+
+        introSection.style.display = 'none';
+
+        confirmationMessage.style.display = 'block';
+        confirmationMessage.innerHTML = `Tack för din bokning, ${localStorage.getItem('name')}! Vi återkommer via mail till ${localStorage.getItem('email')} inom 24 timmar.`;
 
         form.reset();
     });
